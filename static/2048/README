@@ -1,0 +1,77 @@
+/*
+* Name: Brianna Torres Yamanaka
+* Login: cs8bahu
+* Date: January 23, 2015
+* File: .java
+* Sources of Help: Prof Leo, TAs, tutors, textbooks,
+* piazza, java api
+* Describe:README contains short answers to vim, unix, linux
+* and java related questions.
+*/
+
+Vim related Questions:
+
+  (Q) 1) In vim, what command can you use to find and replace every instance of
+      the word fun with amazing? How would you replace only the first instance
+      of fun with amazing in each line?
+
+  (A) To find and replace every instance of the word fun with amazing, from
+      command mode you would type:
+      >:%s/fun/amazing/g 
+      To find and replace every instance of the word with amazing, from command
+      mode you would type:
+      >:%s/fun/amazing/
+
+Unix/Linux Questions:
+
+  (Q) 2) Suppose you are currently inside a directory and in there you want to
+      make a new directory called fooDir. And inside fooDir, you want another
+      directory called barDir. Using only a single mkdir command, how can you
+      create a directory called fooDir with a directory called barDir inside it?
+
+  (A) mkdir -p fooDir/barDir
+
+  (Q) 3) Give an example of how you would use a wildcard character (you can use
+      it with whichever command you want like rm, cat, ls, cp, etc). Describe
+      what happens after you use it.
+
+  (A) javac *.java
+      //wildcard commands apply the passed command to all files of the
+      //specified extension following the wildcard charactere
+
+  (Q) 4) How can you run gvim through the command line to open all Java source
+      code files in the current directory, each file in its own tab?
+
+  (A) gvim -p *.java
+      //I use vim, and have never used gvim. However this works in vim so
+      //I am assuming it works in gvim.
+
+  (Q) 5) What does the keyword static mean in regards to methods? Provide an
+      example use of a static method.
+
+  (A) In regards to methods, the keyword static means that they can be called
+      using the classname. ie if you have static method dance in class Foo, you 
+      can call it using: Foo.dance()
+      You do not need to create an instance of the class to call a static method.
+      Static methods can also not be overridden and are shared across the whole
+      class.
+
+Java Questions
+
+  (Q) 6) A high school student is trying to write a Java program that will draw
+      different shapes and in different possible colors. To do this, she has
+      written just one Java class called ShapeDrawer, which contains all the
+      necessary methods like drawRedCircle(), drawBlueCircle(),
+      drawYellowSquare(), drawGreenSquare(), and so on. Using object-oriented
+      terminology, describe how you can help the student improve her design.
+
+  (A) To begin with, instead of having one Java class called ShapeDrawer that
+      draws, fills in color,chooses the shape she should have multiple classes
+      designated for each shape and different methods. To be able to have the
+      same methods in each of the specific shape classes, she should create
+      one super class that creates a basic shape. The methods in that class will
+      not be called, but rather just set the format and rules for the more specific
+      shape classes that will extend this general basic shape class. Each specific
+      shape class should have a method that way you can pass in different colors
+      for different circles of different sizes. Since the methods won't be called
+      they can be astract.
